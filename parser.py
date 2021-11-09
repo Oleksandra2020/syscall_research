@@ -19,8 +19,6 @@ if __name__ == "__main__":
     filenames = []
     for name in os.scandir(dirname):
         filenames.append(name.path)
-    # filenames = ["./chrome.txt", "./chromium.txt", "./clang.txt", "./firefox.txt", "./gcc.txt", "./gnome_calc.txt"] + \
-    #             ["./gnome_calendar.txt", "./gxx.txt", "./lo_calc.txt", "./loffice.txt", "./scipysignal.txt", "./sklearn.txt"]
     for name in range(len(filenames)):
         collect_syscalls(dct, len(filenames), name, filenames[name])
     del dct['\n']
@@ -29,4 +27,7 @@ if __name__ == "__main__":
     data = pd.DataFrame.from_dict(dct, orient="index")
     data.rename(columns=cols, inplace=True)
     data.sort_index(inplace=True)
+    data = data.reset_index()
+    data.rename(columns={"index": "syscall_names"}, inplace=True)
+    print(data)
     data.to_csv("result.csv")
