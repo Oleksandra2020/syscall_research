@@ -1,0 +1,488 @@
+execve("/usr/bin/libreoffice", ["libreoffice", "--calc"], 0x7fff75333c88 /* 56 vars */) = 0
+brk(NULL)                               = 0x5607af71c000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffcb45f4c90) = -1 EINVAL (Invalid argument)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=79546, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 79546, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f37555e7000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\206\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0+H)\227\201T\214\233\304R\352\306\3379\220%"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1983576, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f37555e5000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2012056, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f37553f9000
+mmap(0x7f375541f000, 1486848, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7f375541f000
+mmap(0x7f375558a000, 311296, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x191000) = 0x7f375558a000
+mmap(0x7f37555d6000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1dc000) = 0x7f37555d6000
+mmap(0x7f37555dc000, 33688, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f37555dc000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f37553f7000
+arch_prctl(ARCH_SET_FS, 0x7f37555e6600) = 0
+mprotect(0x7f37555d6000, 12288, PROT_READ) = 0
+mprotect(0x5607adbf3000, 8192, PROT_READ) = 0
+mprotect(0x7f375562d000, 8192, PROT_READ) = 0
+munmap(0x7f37555e7000, 79546)           = 0
+getuid()                                = 1000
+getgid()                                = 1000
+getpid()                                = 192486
+rt_sigaction(SIGCHLD, {sa_handler=0x5607adbe8300, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7f375543a040}, NULL, 8) = 0
+geteuid()                               = 1000
+brk(NULL)                               = 0x5607af71c000
+brk(0x5607af73d000)                     = 0x5607af73d000
+getppid()                               = 192483
+stat("/home/sophmintaii/Documents/year3/os/syscall_tests", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat(".", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/bin/libreoffice", O_RDONLY) = 3
+fcntl(3, F_DUPFD, 10)                   = 10
+close(3)                                = 0
+fcntl(10, F_SETFD, FD_CLOEXEC)          = 0
+geteuid()                               = 1000
+getegid()                               = 1000
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x5607adbe8300, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7f375543a040}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7f375543a040}, NULL, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x7f375543a040}, NULL, 8) = 0
+read(10, "#!/bin/sh\n#\n# This file is part "..., 8192) = 6735
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192487
+close(4)                                = 0
+read(3, "/home/sophmintaii/Documents/year"..., 128) = 51
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192487, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 192487
+wait4(-1, 0x7ffcb45f481c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+lstat("/usr/bin/libreoffice", {st_mode=S_IFLNK|0777, st_size=34, ...}) = 0
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192488
+close(4)                                = 0
+read(3, "/usr/bin\n", 128)              = 9
+read(3, "", 128)                        = 0
+close(3)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192488, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 192488
+wait4(-1, 0x7ffcb45f46bc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+chdir("/usr/bin")                       = 0
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192489
+close(4)                                = 0
+read(3, "libreoffice\n", 128)           = 12
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192489, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 192489
+wait4(-1, 0x7ffcb45f470c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192490
+close(4)                                = 0
+read(3, "../lib/libreoffice/program/soffi"..., 128) = 35
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192490, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 192490
+wait4(-1, 0x7ffcb45f475c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+lstat("../lib/libreoffice/program/soffice", {st_mode=S_IFREG|0755, st_size=6735, ...}) = 0
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192493
+close(4)                                = 0
+read(3, "../lib/libreoffice/program\n", 128) = 27
+read(3, "", 128)                        = 0
+close(3)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192493, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 192493
+wait4(-1, 0x7ffcb45f481c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+chdir("/usr/lib/libreoffice/program")   = 0
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192494
+close(4)                                = 0
+read(3, "/usr/lib/libreoffice/program\n", 128) = 29
+read(3, "", 128)                        = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192494, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 0
+close(3)                                = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 192494
+wait4(-1, 0x7ffcb45f481c, WNOHANG, NULL) = -1 ECHILD (No child processes)
+chdir("/home/sophmintaii/Documents/year3/os/syscall_tests") = 0
+stat("/usr/lib/libreoffice/program/ooenv", 0x7ffcb45f4840) = -1 ENOENT (No such file or directory)
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192495
+close(4)                                = 0
+stat("/home/sophmintaii/.local/bin/grep", 0x7ffcb45f4a40) = -1 ENOENT (No such file or directory)
+stat("/usr/local/sbin/grep", 0x7ffcb45f4a40) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bin/grep", 0x7ffcb45f4a40) = -1 ENOENT (No such file or directory)
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192495, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = -1 ENOENT (No such file or directory)
+stat("/usr/sbin/grep", 0x7ffcb45f4a40)  = -1 ENOENT (No such file or directory)
+stat("/usr/bin/grep", {st_mode=S_IFREG|0755, st_size=203232, ...}) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192496
+close(3)                                = 0
+close(-1)                               = -1 EBADF (Bad file descriptor)
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 192495
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 192496
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192496, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 192496
+wait4(-1, 0x7ffcb45f49cc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+pipe([3, 4])                            = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f37555e68d0) = 192497
+close(4)                                = 0
+read(3, "Linux\n", 128)                 = 6
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=192497, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = 6
+read(3, "", 128)                        = 0
+close(3)                                = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 192497
+wait4(-1, 0x7ffcb45f48bc, WNOHANG, NULL) = -1 ECHILD (No child processes)
+execve("/usr/lib/libreoffice/program/oosplash", ["/usr/lib/libreoffice/program/oos"..., "--calc"], 0x5607af71ebd8 /* 57 vars */) = 0
+brk(NULL)                               = 0x560328564000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe729861d0) = -1 EINVAL (Invalid argument)
+readlink("/proc/self/exe", "/usr/lib/libreoffice/program/oos"..., 4096) = 37
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc751817000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/glibc-hwcaps/x86-64-v3/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/glibc-hwcaps/x86-64-v3", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/glibc-hwcaps/x86-64-v2/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/glibc-hwcaps/x86-64-v2", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/tls/haswell/x86_64/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/tls/haswell/x86_64", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/tls/haswell/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/tls/haswell", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/tls/x86_64/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/tls/x86_64", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/tls/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/tls", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/haswell/x86_64/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/haswell/x86_64", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/haswell/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/haswell", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/x86_64/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/x86_64", 0x7ffe72985400, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program", {st_mode=S_IFDIR|0755, st_size=16384, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=79546, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 79546, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc751803000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libXinerama.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\21\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=14648, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16680, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc7517fe000
+mmap(0x7fc7517ff000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fc7517ff000
+mmap(0x7fc751800000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc751800000
+mmap(0x7fc751801000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc751801000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/libX11.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libX11.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\240\1\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=1298088, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 1301808, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc7516c0000
+mmap(0x7fc7516d9000, 573440, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7fc7516d9000
+mmap(0x7fc751765000, 606208, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa5000) = 0x7fc751765000
+mmap(0x7fc7517f9000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x138000) = 0x7fc7517f9000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/libpng16.so.16", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpng16.so.16", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000U\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=235592, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 237584, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc751685000
+mmap(0x7fc75168a000, 167936, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000) = 0x7fc75168a000
+mmap(0x7fc7516b3000, 45056, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2e000) = 0x7fc7516b3000
+mmap(0x7fc7516be000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x38000) = 0x7fc7516be000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/libuno_sal.so.3", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0,\1\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=402360, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 423904, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc75161d000
+mprotect(0x7fc75162e000, 319488, PROT_NONE) = 0
+mmap(0x7fc75162e000, 229376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7fc75162e000
+mmap(0x7fc751666000, 86016, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x49000) = 0x7fc751666000
+mmap(0x7fc75167c000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5e000) = 0x7fc75167c000
+mmap(0x7fc751680000, 18400, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc751680000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\206\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0+H)\227\201T\214\233\304R\352\306\3379\220%"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1983576, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2012056, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc751431000
+mmap(0x7fc751457000, 1486848, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7fc751457000
+mmap(0x7fc7515c2000, 311296, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x191000) = 0x7fc7515c2000
+mmap(0x7fc75160e000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1dc000) = 0x7fc75160e000
+mmap(0x7fc751614000, 33688, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc751614000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libXext.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340E\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=81600, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 84152, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc75141c000
+mmap(0x7fc751420000, 45056, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fc751420000
+mmap(0x7fc75142b000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7fc75142b000
+mmap(0x7fc75142f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x12000) = 0x7fc75142f000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libxcb.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \266\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=166488, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc75141a000
+mmap(NULL, 168616, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc7513f0000
+mmap(0x7fc7513fb000, 81920, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7fc7513fb000
+mmap(0x7fc75140f000, 36864, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7fc75140f000
+mmap(0x7fc751418000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x27000) = 0x7fc751418000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \"\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=22912, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 24848, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc7513e9000
+mmap(0x7fc7513eb000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc7513eb000
+mmap(0x7fc7513ed000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fc7513ed000
+mmap(0x7fc7513ee000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fc7513ee000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\"\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=108936, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc7513cd000
+mprotect(0x7fc7513cf000, 98304, PROT_NONE) = 0
+mmap(0x7fc7513cf000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc7513cf000
+mmap(0x7fc7513e0000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7fc7513e0000
+mmap(0x7fc7513e7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7fc7513e7000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\363\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=1364824, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 1364240, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc75127f000
+mmap(0x7fc75128e000, 679936, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7fc75128e000
+mmap(0x7fc751334000, 618496, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb5000) = 0x7fc751334000
+mmap(0x7fc7513cb000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14b000) = 0x7fc7513cb000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\22\n\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2182368, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 2197632, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc751066000
+mmap(0x7fc7510ff000, 1060864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x99000) = 0x7fc7510ff000
+mmap(0x7fc751202000, 442368, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19c000) = 0x7fc751202000
+mmap(0x7fc75126e000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x207000) = 0x7fc75126e000
+mmap(0x7fc75127c000, 10368, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc75127c000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\3405\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=104984, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 107592, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc75104b000
+mprotect(0x7fc75104e000, 90112, PROT_NONE) = 0
+mmap(0x7fc75104e000, 73728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fc75104e000
+mmap(0x7fc751060000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7fc751060000
+mmap(0x7fc751064000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7fc751064000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\200\0\0\0\0\0\0"..., 832) = 832
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 792) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\270<\302\35\177\205gAq\255\235\6`\247\325r"..., 68, 840) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=150720, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc751049000
+mmap(NULL, 136240, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc751027000
+mmap(0x7fc75102e000, 65536, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7fc75102e000
+mmap(0x7fc75103e000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7fc75103e000
+mmap(0x7fc751043000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b000) = 0x7fc751043000
+mmap(0x7fc751045000, 13360, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc751045000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libXau.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\23\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=18720, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 20744, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc751021000
+mmap(0x7fc751022000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fc751022000
+mmap(0x7fc751024000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fc751024000
+mmap(0x7fc751025000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fc751025000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libXdmcp.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240!\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=26800, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 28800, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc751019000
+mmap(0x7fc75101b000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc75101b000
+mmap(0x7fc75101d000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fc75101d000
+mmap(0x7fc75101f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000) = 0x7fc75101f000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbsd.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@O\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=88320, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 94496, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc751001000
+mprotect(0x7fc751005000, 69632, PROT_NONE) = 0
+mmap(0x7fc751005000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fc751005000
+mmap(0x7fc751012000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7fc751012000
+mmap(0x7fc751016000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7fc751016000
+mmap(0x7fc751018000, 288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc751018000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libmd.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`!\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=47472, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 49384, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc750ff4000
+mmap(0x7fc750ff6000, 28672, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fc750ff6000
+mmap(0x7fc750ffd000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7fc750ffd000
+mmap(0x7fc750fff000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7fc750fff000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc750ff2000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc750ff0000
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc750fed000
+arch_prctl(ARCH_SET_FS, 0x7fc750fee080) = 0
+mprotect(0x7fc75160e000, 12288, PROT_READ) = 0
+mprotect(0x7fc750fff000, 4096, PROT_READ) = 0
+mprotect(0x7fc7513ee000, 4096, PROT_READ) = 0
+mprotect(0x7fc751016000, 4096, PROT_READ) = 0
+mprotect(0x7fc75101f000, 4096, PROT_READ) = 0
+mprotect(0x7fc751025000, 4096, PROT_READ) = 0
+mprotect(0x7fc751043000, 4096, PROT_READ) = 0
+mprotect(0x7fc751064000, 4096, PROT_READ) = 0
+mprotect(0x7fc7513cb000, 4096, PROT_READ) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc750feb000
+mprotect(0x7fc75126e000, 45056, PROT_READ) = 0
+mprotect(0x7fc7513e7000, 4096, PROT_READ) = 0
+mprotect(0x7fc751418000, 4096, PROT_READ) = 0
+mprotect(0x7fc7517f9000, 4096, PROT_READ) = 0
+mprotect(0x7fc75142f000, 4096, PROT_READ) = 0
+mprotect(0x7fc75167c000, 12288, PROT_READ) = 0
+mprotect(0x7fc7516be000, 4096, PROT_READ) = 0
+mprotect(0x7fc751801000, 4096, PROT_READ) = 0
+mprotect(0x56032788e000, 4096, PROT_READ) = 0
+mprotect(0x7fc75184b000, 8192, PROT_READ) = 0
+munmap(0x7fc751803000, 79546)           = 0
+set_tid_address(0x7fc750fee350)         = 192486
+set_robust_list(0x7fc750fee360, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7fc75102eb90, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7fc75103b1f0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7fc75102ec30, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fc75103b1f0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0x560328564000
+brk(0x560328585000)                     = 0x560328585000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=17451104, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 17451104, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc74ff46000
+close(3)                                = 0
+futex(0x7fc7516847b8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+readlink("/usr", 0x7ffe729848d0, 1023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffe729848d0, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/libreoffice", 0x7ffe729848d0, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/libreoffice/program", 0x7ffe729848d0, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/libreoffice/program/oosplash", 0x7ffe729848d0, 1023) = -1 EINVAL (Invalid argument)
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fc751472040}, NULL, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x56032788a790, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fc751472040}, NULL, 8) = 0
+readlink("/usr", 0x7ffe72984620, 1023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/lib", 0x7ffe72984620, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/libreoffice", 0x7ffe72984620, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/lib/libreoffice/program", 0x7ffe72984620, 1023) = -1 EINVAL (Invalid argument)
+access("/usr/lib/libreoffice/program/bootstraprc", F_OK) = 0
+futex(0x7fc751684560, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+access("/usr/lib/libreoffice/program/oosplashrc", F_OK) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libreoffice/program/bootstraprc", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=111, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "[Bootstrap]\nInstallMode=<install"..., 4096, 0) = 111
+close(3)                                = 0
+getuid()                                = 1000
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=553, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=553, ...}, AT_EMPTY_PATH) = 0
+read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 553
+read(3, "", 4096)                       = 0
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=553, ...}, AT_EMPTY_PATH) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=79546, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 79546, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc751803000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`5\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=55904, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 83736, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc74ff31000
+mmap(0x7fc74ff34000, 32768, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fc74ff34000
+mmap(0x7fc74ff3c000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7fc74ff3c000
+mmap(0x7fc74ff3e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x7fc74ff3e000
+mmap(0x7fc74ff40000, 22296, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc74ff40000
+close(3)                                = 0
+mprotect(0x7fc74ff3e000, 4096, PROT_READ) = 0
+munmap(0x7fc751803000, 79546)           = 0
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=3121, ...}, AT_EMPTY_PATH) = 0
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 3121
+close(3)                                = 0
+getuid()                                = 1000
+access("/home/sophmintaii", F_OK)       = 0
+mkdir("/home/sophmintaii/.config", 0700) = -1 EEXIST (File exists)
+newfstatat(AT_FDCWD, "/home/sophmintaii/.config", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+getcwd("/home/sophmintaii/Documents/year3/os/syscall_tests", 4096) = 51
+readlink("/home", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+faccessat2(AT_FDCWD, "/home/", F_OK, AT_EACCESS) = 0
+readlink("/home", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+faccessat2(AT_FDCWD, "/home/sophmintaii/", F_OK, AT_EACCESS) = 0
+readlink("/home", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii/.config", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+faccessat2(AT_FDCWD, "/home/sophmintaii/.config/", F_OK, AT_EACCESS) = 0
+readlink("/home", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii/.config", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii/.config/libreoffice", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+faccessat2(AT_FDCWD, "/home/sophmintaii/.config/libreoffice/", F_OK, AT_EACCESS) = 0
+readlink("/home", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii/.config", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii/.config/libreoffice", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+readlink("/home/sophmintaii/.config/libreoffice/4", 0x7ffe72981550, 1023) = -1 EINVAL (Invalid argument)
+access("/tmp", W_OK)                    = 0
+getuid()                                = 1000
+socket(AF_UNIX, SOCK_STREAM, 0)         = 3
+fcntl(3, F_SETFD, FD_CLOEXEC)           = 0
+connect(3, {sa_family=AF_UNIX, sun_path="/tmp/OSL_PIPE_1000_SingleOfficeIPC_504362412591d62accfb81aa6ca31"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/proc/version", {st_mode=S_IFREG|0444, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/", {st_mode=S_IFDIR|0755, st_size=16384, ...}, 0) = 0
+openat(AT_FDCWD, "/sys/dev/block/259:0/queue/rotational", O_RDONLY) = 3
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/usr/lib/libreoffice/program/", {st_mode=S_IFDIR|0755, st_size=16384, ...}, 0) = 0
+openat(AT_FDCWD, "/sys/dev/block/259:0/queue/rotational", O_RDONLY) = 3
+close(3)                                = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fc74f730000
+mprotect(0x7fc74f731000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7fc74ff2f5b0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[192498], tls=0x7fc74ff30640, child_tidptr=0x7fc74ff30910) = 192498
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+futex(0x560328577620, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x560328577670, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0x560328577620, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x5603285798b8, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0x5603285798c0, FUTEX_WAKE_PRIVATE, 1) = 0
+write(2, "Warning: failed to launch javald"..., 68) = 68
+pipe([3, 4])                            = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7fc74ff2f5b0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[192500], tls=0x7fc74ff30640, child_tidptr=0x7fc74ff30910) = 192500
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+futex(0x560328578890, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x5603285788e0, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0x560328578890, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x5603285798b8, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0x5603285798c0, FUTEX_WAKE_PRIVATE, 1) = 0
+close(4)                                = 0
+futex(0x560328578a58, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1636425300, tv_nsec=103669000}, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0x560328578a60, FUTEX_WAKE_PRIVATE, 1) = 0
+close(3)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
