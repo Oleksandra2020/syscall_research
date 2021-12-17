@@ -12,8 +12,7 @@ def collect_syscalls(dct, file_name):
                 seen_execve = True
                 continue
             if "SIG" not in syscall and "exited" not in syscall and seen_execve:
-                if syscall not in dct:
-                    dct[syscall] = 0
+                if syscall not in dct: dct[syscall] = 0
                 dct[syscall] += 1
     return dct
 
