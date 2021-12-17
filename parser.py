@@ -23,7 +23,7 @@ if __name__ == "__main__":
     for name in os.scandir(dirname):
         filenames.append(name.path)
     for name in range(len(filenames)):
-        collect_syscalls(dct, filenames[name])
+        dct = collect_syscalls(dct, filenames[name])
 
     for k in dct:
         dct[k] /= len(filenames)
@@ -33,4 +33,4 @@ if __name__ == "__main__":
     data = data.reset_index()
     data.rename(columns={"index": "syscall_names"}, inplace=True)
     print(data)
-    data.to_csv("result.csv")
+    data.to_csv(f"./results/{dirname}_result.csv")
