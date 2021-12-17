@@ -3,11 +3,15 @@ import sys
 import os
 
 def collect_syscalls(dct, file_name):
+    seen_execve = False
     with open(file_name) as f:
         lines = f.readlines()
         for line in lines:
             syscall = line.split('(')[0]
-            if "SIG" not in syscall and "exited" not in syscall:
+            if syscall == "execve":
+                seen_execve = True
+                continue
+            if "SIG" not in syscall and "exited" not in syscall and seen_execve:
                 if syscall not in dct:
                     dct[syscall] = 0
                 dct[syscall] += 1
