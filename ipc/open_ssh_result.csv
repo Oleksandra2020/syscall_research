@@ -1,0 +1,7 @@
+,syscall_names,./open_ssh
+0,futex,16.0
+1,socket,5.0
+2,connect,5.0
+3,getpeername,3.0
+4,pipe,2.0
+5,set_robust_list,1.0

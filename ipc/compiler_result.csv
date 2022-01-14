@@ -1,0 +1,4 @@
+,syscall_names,./compiler
+0,pipe,5.0
+1,futex,2.0
+2,set_robust_list,1.0

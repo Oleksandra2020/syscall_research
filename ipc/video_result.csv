@@ -1,0 +1,11 @@
+,syscall_names,./video
+0,futex,71.8
+1,pipe2,4.0
+2,recvmsg,3.6
+3,socket,3.0
+4,connect,3.0
+5,set_robust_list,2.0
+6,setsockopt,1.0
+7,getsockname,1.0
+8,getpeername,1.0
+9,sendmsg,1.0

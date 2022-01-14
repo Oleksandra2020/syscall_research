@@ -1,0 +1,9 @@
+,syscall_names,./apache
+0,futex,20.0
+1,socket,3.0
+2,recvmsg,3.0
+3,connect,2.0
+4,set_robust_list,1.0
+5,bind,1.0
+6,getsockname,1.0
+7,sendto,1.0

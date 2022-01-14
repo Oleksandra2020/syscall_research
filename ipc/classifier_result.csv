@@ -1,0 +1,4 @@
+,syscall_names,./classifier
+0,futex,19.6
+1,pipe2,2.0
+2,set_robust_list,1.0
