@@ -14,4 +14,4 @@ if __name__ == "__main__":
         syscall_names, program_count = f[f.columns[1]], f[f.columns[2]]
         plt.figure(figsize=(18, 5))
         plt.bar(syscall_names[:10], program_count[:10])
-        plt.savefig(f"./saved_figs/{filenames[name][6:-4]}_plot", transparent=True)
+        plt.savefig(f"../saved_figs/{filenames[name][6:-4]}_plot", transparent=True)

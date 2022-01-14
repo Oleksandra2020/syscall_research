@@ -43,4 +43,4 @@ if __name__ == "__main__":
     data = data.reset_index()
     data.rename(columns={"index": "syscall_names"}, inplace=True)
     print(data)
-    data.to_csv("result.csv")
+    data.to_csv("../results/calc_result.csv")

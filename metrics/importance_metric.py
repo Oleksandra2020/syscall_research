@@ -1,7 +1,7 @@
 import pandas as pd
 import sys
 import os
-import extract_ipc
+import parser
 
 if __name__ == "__main__":
     sc_names = []
@@ -11,7 +11,7 @@ if __name__ == "__main__":
         filenames.append(name.path)
     for name in range(len(filenames)):
         dct = {}
-        extract_ipc.collect_syscalls(dct, filenames[name])
+        parser.collect_syscalls(dct, filenames[name])
         sc_names.append(list(dct.keys()))
 
     sc_imp = {}
@@ -26,4 +26,4 @@ if __name__ == "__main__":
     data = data.reset_index()
     data.rename(columns={"index": "syscall_names"}, inplace=True)
     print(data)
-    data.to_csv("result.csv")
+    data.to_csv("../results/importance_metric_result.csv")
