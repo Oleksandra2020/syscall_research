@@ -24,6 +24,7 @@ def collect_syscalls(dct, file_name):
                     dct[syscall] += 1
     return dct
 
+
 if __name__ == "__main__":
     dct = {}
     dirname = sys.argv[1]
@@ -36,7 +37,7 @@ if __name__ == "__main__":
     for k in dct:
         dct[k] /= len(filenames)
     data = pd.DataFrame.from_dict(dct, orient="index")
-    data.rename(columns={0:dirname}, inplace=True)
+    data.rename(columns={0: dirname}, inplace=True)
     data.sort_index(inplace=True)
     data = data.reset_index()
     data.rename(columns={"index": "syscall_names"}, inplace=True)

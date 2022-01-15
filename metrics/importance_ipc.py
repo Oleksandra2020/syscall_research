@@ -5,7 +5,7 @@ import extract_ipc
 
 if __name__ == "__main__":
     sc_names = []
-    dirname = sys.argv[1] # directory here should contain all the files for all the software
+    dirname = sys.argv[1]  # directory here should contain all the files for all the software
     filenames = []
     for name in os.scandir(dirname):
         filenames.append(name.path)
@@ -21,7 +21,7 @@ if __name__ == "__main__":
                 sc_imp[sc] = sum([lst.count(sc) for lst in sc_names])
 
     data = pd.DataFrame.from_dict(sc_imp, orient="index")
-    data.rename(columns={0:dirname}, inplace=True)
+    data.rename(columns={0: dirname}, inplace=True)
     data.sort_index(inplace=True)
     data = data.reset_index()
     data.rename(columns={"index": "syscall_names"}, inplace=True)

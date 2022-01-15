@@ -2,13 +2,16 @@ import pandas as pd
 import sys
 import os
 
-def add_syscalls(filename, dct):
+
+def add_syscalls(filename, dct_data):
     f = pd.read_csv(filename)
     syscall_names, program_count = f[f.columns[1]], f[f.columns[2]]
     for i in range(len(syscall_names)):
-        if syscall_names[i] not in dct: dct[syscall_names[i]] = 0
-        dct[syscall_names[i]] += program_count[i]
-    return dct
+        if syscall_names[i] not in dct_data:
+            dct_data[syscall_names[i]] = 0
+        dct_data[syscall_names[i]] += program_count[i]
+    return dct_data
+
 
 if __name__ == "__main__":
     dct = {}
@@ -21,7 +24,7 @@ if __name__ == "__main__":
         dct = add_syscalls(filenames[name], dct)
 
     data = pd.DataFrame.from_dict(dct, orient="index")
-    data.rename(columns={0:dirname}, inplace=True)
+    data.rename(columns={0: dirname}, inplace=True)
     data.sort_index(inplace=True)
     data = data.reset_index()
     data.rename(columns={"index": "syscall_names"}, inplace=True)
