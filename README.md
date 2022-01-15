@@ -68,6 +68,9 @@ python3 calculate_ipc.py <directory with files with one type of software results
 ```
 
 ## Results
+![image](https://user-images.githubusercontent.com/57792587/149616228-03902887-4a68-431f-9a1a-70e14e8cf664.png)
+![image](https://user-images.githubusercontent.com/57792587/149616115-c0a973f2-2887-4367-a58b-f6362d5a1d03.png)
+![image](https://user-images.githubusercontent.com/57792587/149616125-6a7046fa-283f-4e1b-aac1-8ad809e79d38.png)
 
 
 ## Contributing
