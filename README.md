@@ -68,9 +68,11 @@ python3 calculate_ipc.py <directory with files with one type of software results
 ```
 
 ## Results
-![image](https://user-images.githubusercontent.com/57792587/149616228-03902887-4a68-431f-9a1a-70e14e8cf664.png)
-![image](https://user-images.githubusercontent.com/57792587/149616115-c0a973f2-2887-4367-a58b-f6362d5a1d03.png)
-![image](https://user-images.githubusercontent.com/57792587/149616125-6a7046fa-283f-4e1b-aac1-8ad809e79d38.png)
+![IPC system calls count across applications without outliers](https://user-images.githubusercontent.com/57792587/149616383-0d3b37aa-3b9a-4244-a140-ca8121846006.png)
+![importance of IPC syscalls](https://user-images.githubusercontent.com/57792587/149616388-d1cd3a75-c9e2-45d3-a712-a4d5a170f7df.png)
+![sum of IPC syscalls' importance by type](https://user-images.githubusercontent.com/57792587/149616390-ca2707cc-79d1-4be7-90d0-53e38f9f5da4.png)
+
+
 
 
 ## Contributing
