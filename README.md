@@ -23,7 +23,6 @@ data collection:
 
 Type | Application | Operations
 --- | --- | ---
-Seconds | 301 | 283 
 console utilities	| htop	| 3 min
 compilers	| gcc	| compile a library Glog
 browsers | chrome	| browse, bookmark
